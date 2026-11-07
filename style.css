@@ -1,0 +1,431 @@
+
+/* =====================================
+   INTELLISTUDY AI - MAIN STYLESHEET
+===================================== */
+
+:root {
+  --primary: #6547e8;
+  --primary-dark: #5034c5;
+  --background: #f7f7fc;
+  --surface: #ffffff;
+  --text: #202039;
+  --muted: #85859b;
+  --border: #e9e8f1;
+  --success: #20a779;
+  --radius: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Main application layout */
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: 250px;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.brand {
+  font-size: 23px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 42px;
+}
+
+.menu-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.3px;
+  margin: 20px 10px 12px;
+}
+
+.nav-link {
+  display: block;
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 7px;
+  border-radius: 10px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: #efecff;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.upgrade-card {
+  background: #f1edff;
+  padding: 17px;
+  border-radius: 13px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.upgrade-card p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.profile {
+  border-top: 1px solid var(--border);
+  padding-top: 18px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Main content */
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.topbar {
+  height: 76px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 35px;
+}
+
+.page-content {
+  padding: 35px;
+  max-width: 1450px;
+  margin: auto;
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Welcome section */
+
+.welcome {
+  margin-bottom: 30px;
+}
+
+.welcome h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.welcome p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Statistics */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  background: var(--surface);
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.stat-card h3 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.stat-card p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Tool cards */
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.tool-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 25px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(40, 30, 90, 0.07);
+}
+
+.tool-icon {
+  font-size: 27px;
+  margin-bottom: 17px;
+}
+
+.tool-card h3 {
+  margin-bottom: 10px;
+}
+
+.tool-card p {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.bottom-banner {
+  background: linear-gradient(120deg, #6547e8, #9278f5);
+  color: white;
+  border-radius: var(--radius);
+  padding: 28px;
+  margin-top: 30px;
+}
+
+/* Tool pages */
+
+.page-heading {
+  margin-bottom: 25px;
+}
+
+.page-heading h1 {
+  font-size: 27px;
+  margin-bottom: 9px;
+}
+
+.page-heading p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.workspace-card {
+  background: var(--surface);
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 20px;
+}
+
+.workspace-card h3 {
+  margin-bottom: 15px;
+}
+
+textarea,
+input {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: #fcfcff;
+  padding: 14px;
+  border-radius: 10px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+textarea:focus,
+input:focus {
+  border-color: var(--primary);
+}
+
+.primary-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 21px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark);
+}
+
+.result {
+  margin-top: 20px;
+  padding: 18px;
+  background: #f7f5ff;
+  border-radius: 12px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* Tutor chat */
+
+.chat-window {
+  min-height: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  background: #faf9ff;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.chat-message {
+  background: white;
+  padding: 13px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-form input {
+  margin-bottom: 0;
+}
+
+.status {
+  color: var(--success);
+  font-size: 12px;
+}
+
+/* Flashcards and planner */
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #efecff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+#taskList {
+  list-style: none;
+  margin-top: 15px;
+}
+
+#taskList li {
+  padding: 13px;
+  background: #f8f7fc;
+  border-radius: 9px;
+  margin-bottom: 9px;
+}
+
+/* Mobile menu */
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+}
+
+/* Responsive design */
+
+@media (max-width: 850px) {
+  .sidebar {
+    width: 210px;
+  }
+
+  .page-content {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .app {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .sidebar.open {
+    display: flex;
+  }
+
+  .topbar {
+    height: 65px;
+    padding: 0 18px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .page-content {
+    padding: 20px 15px;
+  }
+
+  .welcome h1 {
+    font-size: 24px;
+  }
+
+  .stats,
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chat-form {
+    flex-direction: column;
+  }
+  }
+  
