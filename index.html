@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f7fc">
+  <title>IntelliStudy AI — Your Smart Study Partner</title>
+  <meta name="description" content="An intelligent study companion for summaries, quizzes, flashcards and smarter learning.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app">
+
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-icon">✦</div>
+        <div>
+          <h2>IntelliStudy</h2>
+          <span>YOUR AI STUDY PARTNER</span>
+        </div>
+      </div>
+
+      <div class="menu-label">WORKSPACE</div>
+
+      <nav>
+        <button class="nav-link active" data-page="dashboard">⌂ Dashboard</button>
+        <button class="nav-link" data-page="summarizer">▤ Smart Summarizer</button>
+        <button class="nav-link" data-page="tutor">✧ AI Tutor</button>
+        <button class="nav-link" data-page="quiz">☷ Quiz Generator</button>
+        <button class="nav-link" data-page="flashcards">▣ Flashcards</button>
+        <button class="nav-link" data-page="planner">◷ Study Planner</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="upgrade-card">
+          <div class="sparkle">✦</div>
+          <h3>Learn smarter.</h3>
+          <p>Your next breakthrough starts with one study session.</p>
+        </div>
+        <div class="profile">
+          <div class="avatar">IS</div>
+          <div>
+            <strong>My Workspace</strong>
+            <small>Student account</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <div class="breadcrumb">Workspace / <strong id="pageName">Dashboard</strong></div>
+        <div class="top-actions">
+          <span class="status">✦ AI STUDY SPACE</span>
+          <div class="avatar small-avatar">IS</div>
+        </div>
+      </header>
+
+      <div class="page-content">
+
+        <section class="page active" id="dashboard">
+          <div class="welcome">
+            <div>
+              <span class="eyebrow">YOUR PERSONAL LEARNING SPACE</span>
+              <h1>Study smarter, not harder. <span>✦</span></h1>
+              <p>Welcome to IntelliStudy AI. What would you like to learn today?</p>
+            </div>
+            <div class="welcome-icon">✧</div>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card">
+              <span>📚</span>
+              <p>Study tools</p>
+              <h2>06</h2>
+              <small>Available features</small>
+            </div>
+            <div class="stat-card">
+              <span>✦</span>
+              <p>AI Assistant</p>
+              <h2>Ready</h2>
+              <small>Demo mode active</small>
+            </div>
+            <div class="stat-card">
+              <span>🎯</span>
+              <p>Your next goal</p>
+              <h2>Learn</h2>
+              <small>One step at a time</small>
+            </div>
+          </div>
+
+          <div class="section-heading">
+            <div>
+              <h2>Your study tools</h2>
+              <p>Everything you need to make learning easier.</p>
+            </div>
+          </div>
+
+          <div class="tools-grid">
+            <button class="tool-card" data-open="summarizer">
+              <div class="tool-icon purple">▤</div>
+              <h3>Smart Summarizer</h3>
+              <p>Turn lengthy notes into simple summaries.</p>
+              <span>Explore tool →</span>
+            </button>
+
+            <button class="tool-card" data-open="tutor">
+              <div class="tool-icon peach">✧</div>
+              <h3>AI Tutor</h3>
+              <p>Ask questions and understand difficult topics.</p>
+              <span>Explore tool →</span>
+            </button>
+
+            <button class="tool-card" data-open="quiz">
+              <div class="tool-icon green">☷</div>
+              <h3>Quiz Generator</h3>
+              <p>Test your knowledge with practice questions.</p>
+              <span>Explore tool →</span>
+            </button>
+
+            <button class="tool-card" data-open="flashcards">
+              <div class="tool-icon blue">▣</div>
+              <h3>Flashcards</h3>
+              <p>Create revision cards for important concepts.</p>
+              <span>Explore tool →</span>
+            </button>
+
+            <button class="tool-card" data-open="planner">
+              <div class="tool-icon yellow">◷</div>
+              <h3>Study Planner</h3>
+              <p>Organize your learning goals and schedule.</p>
+              <span>Explore tool →</span>
+            </button>
+
+            <button class="tool-card" data-open="tutor">
+              <div class="tool-icon pink">💬</div>
+              <h3>Ask IntelliStudy</h3>
+              <p>Get help with your next learning challenge.</p>
+              <span>Explore tool →</span>
+            </button>
+          </div>
+
+          <div class="bottom-banner">
+            <div>
+              <span class="eyebrow">A LITTLE REMINDER</span>
+              <h2>Every expert was once a beginner.</h2>
+              <p>Keep learning. Keep growing. Your progress matters.</p>
+            </div>
+            <span class="banner-star">✦</span>
+          </div>
+        </section>
+
+        <section class="page" id="summarizer">
+          <div class="page-heading">
+            <span class="eyebrow">LEARN MORE IN LESS TIME</span>
+            <h1>Smart Summarizer</h1>
+            <p>Paste your notes and turn them into a clear, easy-to-read summary.</p>
+          </div>
+          <div class="workspace-card">
+            <label for="summaryInput">Your study material</label>
+            <textarea id="summaryInput" placeholder="Paste your notes, textbook content or lesson material here..."></textarea>
+            <button class="primary-btn" id="summarizeBtn">✦ Generate summary</button>
+            <div class="result" id="summaryResult">
+              <h3>Your summary will appear here.</h3>
+              <p>Enter some study material to get started.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="tutor">
+          <div class="page-heading">
+            <span class="eyebrow">YOUR PERSONAL LEARNING ASSISTANT</span>
+            <h1>Ask IntelliStudy</h1>
+            <p>Explore a topic and get a simple explanation.</p>
+          </div>
+          <div class="workspace-card">
+            <div class="chat-window" id="chatWindow">
+              <div class="chat-message assistant">
+                ✦ Hello! I'm your IntelliStudy demo tutor. What topic would you like to understand?
+              </div>
+            </div>
+            <form id="chatForm" class="chat-form">
+              <input id="chatInput" type="text" placeholder="Ask me something..." required>
+              <button class="primary-btn" type="submit">Send ↑</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="page" id="quiz">
+          <div class="page-heading">
+            <span class="eyebrow">TEST YOUR KNOWLEDGE</span>
+            <h1>Quiz Generator</h1>
+            <p>Enter a topic and practise with sample questions.</p>
+          </div>
+          <div class="workspace-card">
+            <label for="quizTopic">What topic are you studying?</label>
+            <input id="quizTopic" type="text" placeholder="e.g. Biology, Mathematics, History">
+            <button class="primary-btn" id="quizBtn">Generate practice quiz</button>
+            <div id="quizResult" class="result">
+              <p>Your practice questions will appear here.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="flashcards">
+          <div class="page-heading">
+            <span class="eyebrow">REMEMBER WHAT YOU LEARN</span>
+            <h1>Flashcards</h1>
+            <p>Create simple revision cards and test your memory.</p>
+          </div>
+          <div class="workspace-card">
+            <label for="cardQuestion">Question or term</label>
+            <input id="cardQuestion" placeholder="Enter a question or term">
+            <label for="cardAnswer">Answer or definition</label>
+            <textarea id="cardAnswer" placeholder="Enter the answer or definition"></textarea>
+            <button class="primary-btn" id="addCardBtn">+ Create flashcard</button>
+            <div id="flashcardResult" class="result">
+              <p>Your flashcards will appear here.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="page" id="planner">
+          <div class="page-heading">
+            <span class="eyebrow">MAKE EVERY STUDY SESSION COUNT</span>
+            <h1>Study Planner</h1>
+            <p>Set your learning goals and keep track of your tasks.</p>
+          </div>
+          <div class="workspace-card">
+            <label for="taskInput">Your study goal</label>
+            <input id="taskInput" placeholder="e.g. Revise Chemistry">
+            <button class="primary-btn" id="addTaskBtn">+ Add study goal</button>
+            <div id="taskList" class="result">
+              <p>Your study goals will appear here.</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <footer>© 2026 IntelliStudy AI. Built for smarter learning. <span>✦</span></footer>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+              </html>
+  
